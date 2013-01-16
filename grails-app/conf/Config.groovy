@@ -89,3 +89,10 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.sonymobile.swdtools.statist.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.sonymobile.swdtools.statist.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.sonymobile.swdtools.statist.Role'
+grails.plugins.springsecurity.requestMap.className = 'com.sonymobile.swdtools.statist.RequestMap'
+grails.plugins.springsecurity.securityConfigType = 'Requestmap'
