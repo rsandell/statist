@@ -4,7 +4,7 @@ class Status {
 	String	name
 	int		severity
 
-	static belongsTo = [statusitem: StatusItem]
+	static hasMany = [statusitem: StatusItem]
 
     static constraints = {
 		name blank: false
