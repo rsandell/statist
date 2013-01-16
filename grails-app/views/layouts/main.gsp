@@ -22,9 +22,8 @@
     <div class="container" size="90%">
       <div class="navbar">
          <div class="navbar-inner">
-            <a class="brand" href="#">Statist</a>
+            <a class="brand" href="/statist">Statist</a>
             <ul class="nav">
-               <li class="active"><a href="/statist">Home</a></li>
                <li><a href="/statist/statusItem">StatusItem</a></li>
                <li><a href="/statist/user">Users</a></li>
                <li><a href="/statist/tag">Tags</a></li>
