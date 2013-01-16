@@ -3,6 +3,8 @@ import grails.util.Environment
 
 class BootStrap {
 
+    def springSecurityService
+
     def init = { servletContext ->
 		switch (Environment.current) {
 			case Environment.DEVELOPMENT:
@@ -30,10 +32,22 @@ class BootStrap {
 				def Status07 = new StatusItem(system: Jenkins, text: "Uptime issue 07", tag: TagCnbj, date: new Date(), status: Status1).save()
 				def Status08 = new StatusItem(system: Gerrit, text: "Replication issue 08", tag: TagSeld, date: new Date(), status: Status3).save()
 
-				break
+                break
 			case Environment.PRODUCTION:
 				break
-       }
+        }
+        //Security
+        def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save(failOnError: true)
+        def adminRole = Role.findByAuthority('ROLE_ADMIN') ?: new Role(authority: 'ROLE_ADMIN').save(failOnError: true)
+        def adminUser = User.findByUsername('admin') ?: new User(
+                username: 'admin',
+                //password: springSecurityService.encodePassword('admin'),
+                password: 'admin',
+                enabled: true).save(failOnError: true)
+
+        if (!adminUser.authorities.contains(adminRole)) {
+            UserRole.create adminUser, adminRole, true
+        }
 
     }
     def destroy = {
