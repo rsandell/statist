@@ -25,10 +25,10 @@
             <a class="brand" href="#">Statist</a>
             <ul class="nav">
                <li class="active"><a href="/statist">Home</a></li>
-               <li><a href="/statist/status">system</a></li>
-               <li><a href="/statist/user">user</a></li>
-               <li><a href="/statist/tag">tag</a></li>
-               <li><a href="/statist/system">system</a></li>
+               <li><a href="/statist/statusItem">StatusItem</a></li>
+               <li><a href="/statist/user">Users</a></li>
+               <li><a href="/statist/tag">Tags</a></li>
+               <li><a href="/statist/system">System</a></li>
             </ul>
          </div>
       </div>
