@@ -1,3 +1,3 @@
-statist
-=======
-Status of Internal Systems
+Statist - Status of Internal SysTems
+====================================
+
