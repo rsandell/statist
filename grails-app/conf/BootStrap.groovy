@@ -83,6 +83,7 @@ class BootStrap {
         new RequestMap(url: "/system/**", configAttribute: 'ROLE_ADMIN').save()
         new RequestMap(url: "/tag/**", configAttribute: 'ROLE_ADMIN').save()
         new RequestMap(url: "/statusitem/**", configAttribute: 'ROLE_ADMIN').save()
+        new RequestMap(url: "/user/**", configAttribute: 'ROLE_ADMIN').save()
 
 
     }
