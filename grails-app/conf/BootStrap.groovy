@@ -72,6 +72,11 @@ class BootStrap {
             UserRole.create adminUser, adminRole, true
         }
 
+        new RequestMap(url: "/**", configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        new RequestMap(url: "/system/**", configAttribute: 'ROLE_ADMIN').save()
+        new RequestMap(url: "/statusitem/**", configAttribute: 'ROLE_ADMIN').save()
+
+
     }
     def destroy = {
     }
