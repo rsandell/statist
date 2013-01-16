@@ -5,7 +5,7 @@ class System {
 	int prio
 	boolean archived
 
-	static hasMany = [statusitem: StatusItem, tag: Tag]
+	static hasMany = [tags: Tag]
 
     static constraints = {
 		name blank:false

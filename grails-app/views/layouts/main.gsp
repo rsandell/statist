@@ -6,6 +6,7 @@
       </title>
       <g:layoutTitle/>
       <r:layoutResources/>
+      <r:require modules="bootstrap"/>
    </head>
    <body>
       <div class="navbar">
