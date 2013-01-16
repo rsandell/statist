@@ -1,2 +1,2 @@
-statist
-=======
+Statist - Status of Internal SysTems
+====================================
