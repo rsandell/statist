@@ -10,9 +10,13 @@
                 <h1> Jenkins </h1>
                 Offline
             </div>
-            <div class="span4" style="background-color: #dff0d8; border: 1px solid #d6e9c6">
+            <div class="span4" style="background-color: #f0dfd8; border: 1px solid #d6e9c6">
                 <h1> Gerrit </h1>
-                Online (as usual)
+                Offline (as usual)
+            </div>
+            <div class="span5 offset1" style="background-color: #dff0d8; border: 1px solid #d6e9c6">
+            	<h1> C2D </h1>
+            	Online (as usual)
             </div>
         </div>
     </body>
