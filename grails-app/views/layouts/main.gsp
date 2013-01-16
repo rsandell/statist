@@ -2,11 +2,11 @@
 <html lang="en">
    <head>
       <title>
-         Statist - Status of Internal SysTems
+        <g:layoutTitle/>
       </title>
-      <g:layoutTitle/>
-      <r:layoutResources/>
-      <r:require modules="bootstrap"/>
+       <g:layoutHead/>
+       <r:require modules="bootstrap"/>
+       <r:layoutResources/>
    </head>
    <body>
       <div class="navbar">
