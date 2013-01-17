@@ -26,7 +26,7 @@ class BootStrap {
                 def gerrit = new System(name: "Gerrit", prio: 1, archived: false, tags: [tagGerrit])
 				def jenkins = new System(name: "Jenkins", prio: 4, archived: false, tags: [tagJenkins])
 				def crashTool = new System(name: "CrashTool", prio: 2, archived: false, tags: [tagCrashTool])
-				def clearCase = new System(name: "ClearCase", prio: 1, archived: false, tags: [tagClearCase])
+				def clearCase = new System(name: "ClearCase", prio: 1, archived: true, tags: [tagClearCase])
 				gerrit.save()
 				jenkins.save()
 				crashTool.save()
@@ -44,6 +44,7 @@ class BootStrap {
 				def afota = new System(name: "afota", prio: 5, archived: false)
 				def source = new System(name: "source", prio: 5, archived: false)
 				def emma = new System(name: "emma", prio: 5, archived: false)
+				def deliveryweb = new System(name: "DeliveryWeb", prio: 3, archived: true)
 				c2d.save()
 				dms.save()
 				mtbf.save()
@@ -56,6 +57,7 @@ class BootStrap {
 				afota.save()
 				source.save()
 				emma.save()
+				deliveryweb.save()
 
 				def StatusOk = new Status (name: "Ok", severity: 10)
 				def Status1 = new Status (name: "1", severity: 1)
@@ -78,6 +80,7 @@ class BootStrap {
 				def Status06 = new StatusItem(system: jenkins, text: "Uptime issue 06", tag: tagJpto, date: new Date(), status: Status2)
 				def Status07 = new StatusItem(system: jenkins, text: "Uptime issue 07", tag: tagCnbj, date: new Date(), status: Status1)
 				def Status08 = new StatusItem(system: gerrit, text: "Replication issue 08", tag: tagSeld, date: new Date(), status: Status3)
+				def Status09 = new StatusItem(system: deliveryweb, text: "Uptime issue 10", tag: tagSeld, date: new Date(), status: Status2)
 				Status01.save()
 				Status02.save()
 				Status03.save()
@@ -86,6 +89,7 @@ class BootStrap {
 				Status06.save()
 				Status07.save()
 				Status08.save()
+				Status09.save()
 
                 break
 			case Environment.PRODUCTION:

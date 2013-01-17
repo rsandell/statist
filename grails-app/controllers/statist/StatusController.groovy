@@ -6,7 +6,7 @@ import com.sonymobile.swdtools.statist.System
 class StatusController {
 
     def status = {
-        def systems = System.list(sort: "prio", order: "asc");
+        def systems = System.findAllByArchived(false, [sort: "prio", order: "asc"]);
         def sysStatus = [:]
         systems.each { sys ->
             def item = StatusItem.findBySystemAndStatusIsNotNull(sys)
