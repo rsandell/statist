@@ -1,13 +1,14 @@
 package com.sonymobile.swdtools.statist
 
 class Status {
-	String	name
-	int		severity
+    String name
+    int severity
 
-	static hasMany = [statusitem: StatusItem]
+    static hasMany = [statusitem: StatusItem]
 
     static constraints = {
 		name blank: false
 		severity blank: false
     }
+    String toString() {"$name($severity)"}
 }
